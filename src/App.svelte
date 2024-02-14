@@ -1,5 +1,7 @@
 <script lang="ts">
 import me from "./assets/me.jpg"
+import franke1 from "./assets/franke1.jpg"
+import franke2 from "./assets/franke2.jpg"
 let yesChosen = false;
 let noChosen = false; 
 let noButton: HTMLButtonElement;
@@ -35,6 +37,8 @@ $: chosenName = names[Math.trunc(Math.random() * names.length -1)];
 
 console.log(Math.random() * names.length -1)
 
+let img = Math.trunc(Math.random() * 2) === 0 ? franke1 : franke2;
+
 </script>
 
 <main>
@@ -48,7 +52,7 @@ console.log(Math.random() * names.length -1)
     
         <div class="img-box">
 
-          <img src={me} alt="sexy pic of me"/>
+          <img src={img} alt="sexy pic of me"/>
         </div>
         {#if !yesChosen}
         <div class="button-div">
@@ -58,7 +62,7 @@ console.log(Math.random() * names.length -1)
  {:else} 
  <div class="number">
    <p>Here's my number {chosenName}</p>
-   <p></p>
+   <p>773-875-4389</p>
   </div>
 {/if}
       </form>
