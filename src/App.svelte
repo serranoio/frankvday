@@ -1,5 +1,4 @@
 <script lang="ts">
-import me from "./assets/me.jpg"
 import franke1 from "./assets/franke1.jpg"
 import franke2 from "./assets/franke2.jpg"
 let yesChosen = false;
